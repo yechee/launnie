@@ -1,3 +1,7 @@
 Learning how to Git
 
 Create a File and Save it with a Filename
+It should then appear in the Git window.
+There'll be questions marks under the Status tab cos Git is now aware of the existence of this file, but does NOT know what you want to do with it just yet. 
+In order to prep the file for a Commit, tick the Stage box—this File is now ready for a Commit. 
+The File can be Committed by itself (standalone) or you can choose additional files to be Commited in a single Commit event
