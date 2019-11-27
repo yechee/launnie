@@ -53,7 +53,11 @@ predictors$flowering_std <-
   (predictors$flowering_pc - mean(predictors$flowering_pc)) /
   sd(predictors$flowering_pc)
 
-
+source('~/Documents/Learning/launnie/R/rescale_fn.R')
+predictors$temperature_std <- rescale(predictors$temperature_c)
+predictors$precipitation_std <- rescale(predictors$precipitation_mm)
+predictors$tree_cover_std <- rescale(predictors$tree_cover_pc)
+predictors$flowering_std <- rescale(predictors$flowering_pc)
 
 # create a data set with everything includes
 data_set <- data.frame(
@@ -215,3 +219,5 @@ mtext("Species 2", side = 3, line = 0.5, adj = 0.02, cex = 1.5)
 # great, but this seems like a huge amount of copy-paste and a lot of
 #   opportunities for mistakes if we want to plot three species by
 #   four predictors. What if we had more species or more predictors?
+
+# my slightly edited functions_exercise.R file
